@@ -213,7 +213,7 @@ body .header-wrapper .header .hero nav {
 @media screen and (min-width: 992px) {
   body .header-wrapper .header .hero .container {
     display: flex;
-    padding: 3.6rem;
+    padding: 3.5rem;
   }
 }
 @media screen and (min-width: 992px) {
@@ -221,6 +221,7 @@ body .header-wrapper .header .hero nav {
     margin-right: 2rem;
     text-decoration: none;
     color: white;
+    font-size: 1.1rem;
   }
 }
 body .header-wrapper .discover {
@@ -261,6 +262,14 @@ body .header-wrapper .discover .wrapper a {
   text-decoration: none;
   color: black;
   letter-spacing: 1rem;
+  display: block;
+  transition: -webkit-transform 200ms ease-in;
+  transition: transform 200ms ease-in;
+  transition: transform 200ms ease-in, -webkit-transform 200ms ease-in;
+}
+body .header-wrapper .discover .wrapper a:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 body .header-wrapper .discover .slider {
   background-color: black;
@@ -306,6 +315,7 @@ body .lower-wrapper .row .innovation {
   body .lower-wrapper .row .innovation {
     width: 40%;
     margin-bottom: 0rem;
+    margin-top: 3.5rem;
   }
 }
 body .lower-wrapper .row .innovation h2 {

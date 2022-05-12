@@ -83,7 +83,7 @@ body{
 				.container{
 					@include mixins.bp-large{
 						display: flex;
-						padding: 3.6rem;						
+						padding: 3.5rem;						
 						
 					}
 
@@ -92,6 +92,7 @@ body{
 							margin-right: 2rem;
 							text-decoration: none;
 							color: white;
+							font-size: 1.1rem;
 						}
 					}
 
@@ -138,6 +139,12 @@ body{
 					text-decoration: none;
 					color: black;
 					letter-spacing: 1rem;
+					display: block;
+					transition: transform 200ms ease-in;
+				}
+
+				a:hover{
+					transform: scale(1.1);
 				}
 			}
 
@@ -191,6 +198,7 @@ body{
 				@include mixins.bp-large{
 					width: 40%;
 					margin-bottom: 0rem;
+					margin-top: 3.5rem;
 				}
 
 				h2{
