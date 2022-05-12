@@ -6,7 +6,9 @@
 		<title>¯\_(ツ)_/¯</title>
 		<meta name="description" content="" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="dist/css/main.css" />
 
 		<!--
@@ -46,21 +48,51 @@
 	</head>
 
 	<body>
-		<div class="floating-box">
-			<img class="logo" src="dist/img/logo.png" alt="Circus Logo" />
-			<div class="foreground">
-				<h1>Hello World!</h1>
-				<p>Yep, you've got the Circus Starter project working.</p>
-				<p>Congratulations! You're ready to code.</p>
-				<p class="github">
-					<a target="_blank" rel="noopener" href="https://github.com/CreativeCircus/circus-starter"
-						>https://github.com/CreativeCircus/circus-starter</a
-					>
-				</p>
-				<code>1.10.0</code>
-			</div>
-			<div class="background"></div>
-		</div>
+		<header>
+			<section class="header-wrapper">
+				<div class="header">
+					<div class="hero">
+						<h1>circ</h1>
+						<nav>
+							<ul class="container">
+								<li><a href="">home</a></li>
+								<li><a href="">shop</a></li>
+								<li><a href="">about</a></li>
+								<li><a href="">contact</a></li>
+							</ul>
+						</nav>						
+					</div>
+				</div>
+				<section class="discover">
+					<div class="wrapper">
+						<h2>Discover innovative ways to synergize</h2>
+						<p>We provide unmatched quality, comfort, and style for thinkers and
+						creators across the country. Our experts combine form and function in
+						bringing your vision to life. Create a creation in your own style with
+						our collection and make your ideas a reflection of you and what you love.</p>
+						<a href="">LEARN MORE <img src="/src/img/long-arrow.svg" alt="arrow"></a>
+					</div>
+					<div class="slider">
+						<div class="slide__buttons"><img src="/src/img/short-arrow-left.svg" alt="arrow"></div>
+						<div class="slide__buttons"><img src="/src/img/short-arrow-right.svg" alt="arrow"></div>
+					</div>				
+				</section>
+			</section>
+			<section class="lower-wrapper">
+				<section class="row">
+					<div class="sky"></div>
+					<div class="innovation">
+						<h2>ABOUT OUR INNOVATIONS</h2>
+						<p>Our multifunctional approach blends design and function to suit your individual taste.
+						Make each creation unique, or pick a cohesive experiment that best expresses your interests
+						and what inspires you. Find the innovation you need, from traditional to modern, or anything
+						in between. Innovation specialists are available to help you create your dream.</p>
+					</div>
+					<div class="man"></div>
+				</section>
+			</section>
+			
+		</header>
 
 		<script src="dist/js/main.js"></script>
 	</body>

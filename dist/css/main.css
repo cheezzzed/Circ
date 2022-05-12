@@ -83,12 +83,12 @@ time,
 mark,
 audio,
 video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -103,36 +103,38 @@ hgroup,
 menu,
 nav,
 section {
-	display: block;
+  display: block;
 }
 
 body {
-	line-height: 1;
+  line-height: 1;
 }
 
 ol,
 ul {
-	list-style: none;
+  list-style: none;
 }
 
 blockquote,
 q {
-	quotes: none;
+  quotes: none;
 }
 
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-	content: "";
-	content: none;
+  content: "";
+  content: none;
 }
 
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
+/* 0. Breakpoints ==================================== */
+/* 1. Colors ========================================= */
 /* 
 ==============================================
 CONTENT:	Project Name Here
@@ -157,78 +159,175 @@ background: variables.$primary-color;
 */
 /* 1. Main Layout ================================= */
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-	background: #2e3032;
+  font-family: "League Spartan", sans-serif;
 }
-
-/* 2. Content ================================= */
-.floating-box {
-	position: relative;
-	font-family: sans-serif;
-	width: 90%;
-	max-width: 500px;
-	margin: 140px auto;
-	padding: 30px 20px 30px 30px;
+@media screen and (min-width: 992px) {
+  body .header-wrapper {
+    display: flex;
+  }
 }
-.floating-box .foreground {
-	position: relative;
-	z-index: 2;
-	transform: translateZ(100px);
+body .header-wrapper .header {
+  background-image: url(/src/img/buildings.svg);
+  background-position: center;
+  background-size: cover;
+  height: 22.5rem;
+  width: 100%;
 }
-.floating-box .background {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	left: 0;
-	top: 0;
-	background: white;
-	z-index: 1;
-	transition: 0.2s;
-	transform: translateX(20px) perspective(600px) rotateY(15deg);
+@media screen and (min-width: 992px) {
+  body .header-wrapper .header {
+    height: 35rem;
+    width: 60%;
+  }
 }
-.floating-box:hover .background {
-	transform: translateX(-30px) perspective(600px) rotateY(-15deg);
+@media screen and (min-width: 992px) {
+  body .header-wrapper .header .hero {
+    display: flex;
+  }
 }
-.floating-box .logo {
-	position: absolute;
-	top: -30px;
-	width: 60px;
-	z-index: 2;
-	transform: translateZ(100px);
-	transition: 0.3s;
+body .header-wrapper .header .hero h1 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 2rem;
+  padding: 3rem;
+  color: white;
 }
-.floating-box .logo:hover {
-	-ms-transform: rotate(-0.4turn);
-	    transform: rotate(-0.4turn);
+@media screen and (min-width: 992px) {
+  body .header-wrapper .header .hero h1 {
+    text-align: left;
+  }
 }
-.floating-box h1 {
-	font-weight: 700;
-	font-size: 22pt;
-	margin: 15px 0;
+body .header-wrapper .header .hero nav {
+  display: none;
 }
-.floating-box p {
-	color: #777;
-	line-height: 140%;
+@media screen and (min-width: 992px) {
+  body .header-wrapper .header .hero nav {
+    display: flex;
+  }
 }
-.floating-box p.github {
-	font-size: 0.8em;
+@media screen and (min-width: 992px) {
+  body .header-wrapper .header .hero .container {
+    display: flex;
+    padding: 3.6rem;
+  }
 }
-.floating-box p.github a {
-	opacity: 0.2;
-	transition: 0.3s;
+@media screen and (min-width: 992px) {
+  body .header-wrapper .header .hero .container a {
+    margin-right: 2rem;
+    text-decoration: none;
+    color: white;
+  }
 }
-.floating-box p.github a:hover {
-	opacity: 1;
-	color: red;
+body .header-wrapper .discover {
+  position: relative;
 }
-.floating-box code {
-	position: absolute;
-	top: 20px;
-	right: 20px;
-	font-size: 0.8em;
-	opacity: 0.2;
+@media screen and (min-width: 992px) {
+  body .header-wrapper .discover {
+    width: 40%;
+  }
+}
+body .header-wrapper .discover .wrapper {
+  text-align: left;
+  margin-top: 5rem;
+  margin-bottom: 4.5rem;
+  margin-left: 2rem;
+  margin-right: 3rem;
+  margin-bottom: 5rem;
+}
+@media screen and (min-width: 992px) {
+  body .header-wrapper .discover .wrapper {
+    margin-bottom: 0rem;
+    margin-left: 3.5rem;
+  }
+}
+body .header-wrapper .discover .wrapper h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+body .header-wrapper .discover .wrapper p {
+  text-align: left;
+  line-height: 1.3rem;
+  margin-bottom: 5rem;
+  font-size: 1.25rem;
+  color: #a0a0a0;
+}
+body .header-wrapper .discover .wrapper a {
+  text-decoration: none;
+  color: black;
+  letter-spacing: 1rem;
+}
+body .header-wrapper .discover .slider {
+  background-color: black;
+  display: flex;
+  position: absolute;
+  align-content: space-between;
+  padding: 1.5rem;
+  top: -10rem;
+  left: 20.5rem;
+}
+body .header-wrapper .discover .slider .slide__buttons {
+  margin-right: 3rem;
+}
+@media screen and (min-width: 992px) {
+  body .lower-wrapper .row {
+    display: flex;
+  }
+}
+body .lower-wrapper .row .sky {
+  background-image: url(/src/img/sky.svg);
+  background-position: center;
+  background-size: cover;
+  height: 22.5rem;
+  width: 100%;
+  margin-bottom: 5rem;
+}
+@media screen and (min-width: 992px) {
+  body .lower-wrapper .row .sky {
+    height: 16rem;
+    width: 30%;
+    margin-bottom: 0rem;
+  }
+}
+body .lower-wrapper .row .innovation {
+  text-align: left;
+  margin-top: 5rem;
+  margin-bottom: 4.5rem;
+  margin-left: 2rem;
+  margin-right: 3rem;
+  margin-bottom: 5rem;
+}
+@media screen and (min-width: 992px) {
+  body .lower-wrapper .row .innovation {
+    width: 40%;
+    margin-bottom: 0rem;
+  }
+}
+body .lower-wrapper .row .innovation h2 {
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.5rem;
+}
+body .lower-wrapper .row .innovation p {
+  font-size: 1.05rem;
+  line-height: 1.3rem;
+  color: #a0a0a0;
+}
+body .lower-wrapper .row .man {
+  background-image: url(/src/img/man.svg);
+  background-position: center;
+  background-size: cover;
+  height: 22.5rem;
+  width: 100%;
+}
+@media screen and (min-width: 992px) {
+  body .lower-wrapper .row .man {
+    height: 16rem;
+    width: 30%;
+  }
 }
 /*# sourceMappingURL=main.css.map */
