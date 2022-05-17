@@ -263,13 +263,10 @@ body .header-wrapper .discover .wrapper a {
   color: black;
   letter-spacing: 1rem;
   display: block;
-  transition: -webkit-transform 200ms ease-in;
-  transition: transform 200ms ease-in;
-  transition: transform 200ms ease-in, -webkit-transform 200ms ease-in;
+  transition: letter-spacing 200ms ease-in;
 }
 body .header-wrapper .discover .wrapper a:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  letter-spacing: 20px;
 }
 body .header-wrapper .discover .slider {
   background-color: black;

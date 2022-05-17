@@ -140,11 +140,11 @@ body{
 					color: black;
 					letter-spacing: 1rem;
 					display: block;
-					transition: transform 200ms ease-in;
+					transition: letter-spacing 200ms ease-in;
 				}
 
 				a:hover{
-					transform: scale(1.1);
+					letter-spacing: 20px;
 				}
 			}
 
